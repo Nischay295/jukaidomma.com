@@ -1,0 +1,500 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', sans-serif;
+
+}
+.header{
+	min-height: 100vh;
+	width: 100%;
+	background-image: linear-gradient(rgba(4, 9, 30, 0.7),rgba(4, 9, 30, 0.7)),url(images/3_20220302_175108_0002.png);
+    background-position: center; 
+    background-size: cover;
+    position: relative;
+
+}
+nav{
+	display: flex;
+	padding: 2% 6%;
+	justify-content: space-between;
+	align-content: center;
+}
+.class-logo{
+	display: flex;
+	padding: 4% 8%;
+	justify-content: space-between;
+	align-content: center;
+}
+.class-logo img{
+	width: 120px;
+	border-radius: 90%;
+}
+nav img{
+	width: 70px;
+	border-radius: 60%;
+}
+.nav-links{
+	flex: 1;
+	text-align: right;
+}
+.nav-links ul li{
+	list-style: none;
+	display: inline-block;
+	padding: 8px 12px;
+	position: relative;
+}
+/*--------------------popup contact------------------*/
+
+.modal__wrapper{
+    position: fixed;
+    left:0;
+    top:0;
+    background: rgba(0, 0, 0, 0.6);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .3s ease-in-out;
+}
+
+.modal__container {
+    background: #fff;
+    width: 560px;
+    max-width: 90%;
+    padding: 20px;
+    border-radius: 4px;
+    position: relative;
+    transform: translateY(-100%);
+    transition: all .3s ease-in-out;
+}
+.btn__purple {
+    background:  #6B46C1;
+    padding: 10px 40px;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+.action {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.modal__container button.close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 32px;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.modal__container button.close:hover {
+    color: #6B46C1;
+}
+.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+.modal__wrapper.active .modal__container{
+    transform: translateY(0px);
+} 
+
+/*--------------------end popup contact------------------*/
+.nav-links ul li a{
+	color: #fff;
+	text-decoration: none;
+	font-size: 13px;
+}
+.nav-links ul li::after{
+	content: '';
+	width: 0%;
+	height: 2px;
+	background: #f44336;
+	display: block;
+	margin: auto;
+	transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+	width: 100%;
+
+}
+.text-box{
+	width: 90%;
+	color: #fff;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	text-align: center;
+}
+.text-box h1{
+	font-size: 62px;
+	color: #fff;
+}
+.text-box p{
+	margin: 10px 0 40px;
+	font-size: 14px;
+	color: #fff;
+}
+.hero-btn{
+	display: inline-block;
+	text-decoration: none;
+	color: #fff;
+	border: 1px solid #fff;
+	padding: 12px 34px;
+	font-size: 13px;
+	background: transparent;
+	position: relative;
+	cursor: pointer;
+}
+.hero-btn:hover{
+	border: 1px solid #f44336;
+	background: #f44336;
+	transition: 1s;
+}
+nav .fa-solid{
+	display: none;
+	
+}
+/*------------@media----------------*/
+@media(max-width: 300px){
+	text-box h1 {
+		font-size: 20px;
+	}
+	.nav-links ul li{
+		display: block;
+	}
+	.nav-links ul li{
+		position: absolute;
+		background: #f44336;
+		height: 100vh;
+		width: 200px;
+		top: 0;
+		right: -200px;
+		text-align: left;
+		z-index: 2;
+		transition: 1s;
+	}
+	
+}
+/*---------Activites---------*/
+
+.Activites{
+	width: 80%;
+	margin: auto;
+	text-align: center;
+	padding-top: 100px;
+
+}
+h1{
+	font-size: 36px;
+	font-weight: 600;
+}
+p{
+	color: #777;
+	font-size: 14px;
+	font-weight: 300;
+	line-height: 22px;
+	padding: 10px;
+}
+.row{
+	margin-top: 5%;
+	display: flex;
+	justify-content: space-between;
+}
+.activities-mma{
+	flex-basis: 31%;
+	background: #fff3f3;
+	border-radius: 10px;
+	margin-bottom: 5%;
+	padding: 20px 12px;
+	box-sizing: border-box;
+}
+h3{
+	text-align: center;
+	font-weight: 600;
+	margin: 10px 0;
+}
+.activities-mma:hover{
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+}
+@MEDIA(max-width: 700px){
+	.row{
+		flex-direction: column;
+	}
+}
+/*------------our teams----------*/
+.team{
+	margin: 75px 0;
+}
+h1{
+	text-align: center;
+	font-weight: bold;
+	letter-spacing: 2px;
+	
+	padding-bottom: 10px;
+}
+h1:after{
+	content: '';
+	background: #333;
+	display: block;
+	height: 3px;
+	width: 150px;
+	margin: 10px auto;
+}
+.profile{
+	margin-top: 25px;
+}
+.img-box img{
+	width: 200px;
+	height: 200px;
+	object-fit: cover;
+	object-position: center;
+
+}
+.profile .img-box{
+	opacity: 1;
+	display: block;
+	position: relative;
+}
+h2{
+	color: white;
+}
+h3{
+	color: white;
+}
+.profile h2{
+	color: white;
+	font-size: 22px;
+	font-weight: bold;
+	margin-top: 15px;
+}
+.profile h3{
+	color: white;
+font-size: 22px;
+	font-weight: bold;
+	margin-top: 15px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*------------location----------*/
+.location{
+	width: 80%;
+	margin: auto;
+	text-align: center;
+	padding-top: 50px;
+}
+.location-mma{
+	flex-basis: 32%;
+	border-radius: 10px;
+	margin-bottom: 30px;
+	position: relative;
+	overflow: hidden;
+}
+.location-mma img{
+	width: 100%;
+	display: block;
+}
+.layer{
+	background: transparent;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: 0.5s;
+}
+.layer:hover{
+	background: rgba(226,0,0,0.7);
+}
+.layer h3{
+	width: 100%;
+	font-weight: 500;
+	color: #fff;
+	font-size: 26px;
+	bottom: 0;
+	left: 50%;
+	transform: translate(-50%);
+	position: absolute;
+	opacity: 0;
+	transition: 0.5s;
+}
+.layer:hover h3{
+	bottom: 49%;
+	opacity: 1;
+}
+/*----------------our achievements----------------*/
+
+.achievements{
+	width: 80%;
+	margin: auto;
+	text-align: center;
+	padding: 100px;
+
+}
+h1{
+	color: white;
+}
+.achievements-mma{
+	flex-basis: 31%;
+	border-radius: 10px;
+	margin-bottom: 5%;
+	text-align: left;
+}
+.achievements-mma img{
+	width: 100%;
+	border-radius: 10px;
+}
+.achievements-mma h3{
+	margin-top: 16px;
+	margin-bottom: 15px;
+	text-align: left;
+}
+/*------------------------------end ---------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
